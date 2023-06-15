@@ -1,0 +1,66 @@
+.background-pic-appointment {
+  background-image: url(../../assets/images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+}
+.font-color {
+  color: rgba(25, 211, 174, 1);
+}
+.available-margin {
+  margin-top: 30px;
+}
+.one-appoinment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 440px;
+  background: #ffffff;
+  box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: 30px;
+}
+.btn-appoinment {
+  height: 48px;
+  width: 190px;
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #19d3ae -22.5%, #0fcfec 120.83%);
+  border-radius: 8px;
+  color: white;
+}
+.form-modal input {
+  display: block;
+  width: 440px;
+  height: 48px;
+  margin-top: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+}
+.form-modal select {
+  width: 440px;
+  height: 48px;
+  margin-top: 15px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+}
+.form-modal .modal-submit {
+  width: 440px;
+  height: 48px;
+  background: #3a4256;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form-modal .input-black {
+  background: #e6e6e6;
+}
+.form-modal .input-border {
+  border: 1px solid #e6e6e6;
+}

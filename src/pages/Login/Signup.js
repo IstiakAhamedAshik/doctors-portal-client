@@ -1,8 +1,8 @@
 import React from 'react'
 import './login.css'
 import { Link } from 'react-router-dom'
-const Login = () => {
-  const handaleLogin = (event) => {
+const Signup = () => {
+  const handaleSgineIn = (event) => {
     event.preventDefault()
     const form = event.target
     const email = form.email.value
@@ -12,8 +12,11 @@ const Login = () => {
   return (
     <div>
       <div className='login-page'>
-        <h2 className='text-center text-2xl font-bold'>Login</h2>
-        <form onSubmit={handaleLogin}>
+        <h2 className='text-center text-2xl font-bold'>Sign Up</h2>
+        <form onSubmit={handaleSgineIn}>
+          <div>
+            <input type='text' name='name' placeholder='Your Name'></input>
+          </div>
           <div>
             <input
               type='email'
@@ -31,24 +34,20 @@ const Login = () => {
             ></input>
           </div>
           <div>
-            <input className='login-btn' type='submit' value='LOGIN' />
+            <input className='login-btn' type='submit' value='SIGNUP' />
           </div>
         </form>
         <div>
           <p className='text-center mt-2'>
-            New to Doctors Portal?{' '}
-            <Link className='link-signup' to='/signup'>
-              Create new account
+            You already have an account?{' '}
+            <Link className='link-signup' to='/login'>
+              Login
             </Link>
           </p>
-          <hr />
-          <div className='text-center'>
-            <button className='google-btn'>CONTINUE WITH GOOGLE</button>
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-export default Login
+export default Signup
