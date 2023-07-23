@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './login.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../context/Authprovider'
 const Login = () => {
+  const { signIn } = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
+  let from = location.state?.from?.pathname || '/'
   const handaleLogin = (event) => {
     event.preventDefault()
     const form = event.target
     const email = form.email.value
     const password = form.password.value
-    console.log(email, password)
+    signIn(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user
+        console.log(user)
+        navigate(from, { replace: true })
+        form.reset()
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    form.reset()
   }
+
   return (
     <div>
       <div className='login-page'>

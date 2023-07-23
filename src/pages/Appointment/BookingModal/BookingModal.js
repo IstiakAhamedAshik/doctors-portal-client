@@ -33,6 +33,7 @@ const BookingModal = ({ booking, selectedDate }) => {
                 className='input-black'
                 type='text'
                 name='date'
+                disabled
                 defaultValue={format(selectedDate, 'PP')}
               />
               <select name='time' id=''>

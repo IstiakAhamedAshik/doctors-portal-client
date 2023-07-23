@@ -6,6 +6,8 @@ import Appointment from '../pages/Appointment/Appointment'
 import Reviews from '../pages/Reviews/Reviews'
 import Contuct from '../pages/Contuct/Contuct'
 import Signup from '../pages/Login/Signup'
+import Dashbord from '../pages/dashbord/Dashbord'
+import PrivateRoutes from './privateRoutes/PrivateRoutes'
 
 export const router = createBrowserRouter([
   {
@@ -37,5 +39,13 @@ export const router = createBrowserRouter([
         element: <Signup></Signup>,
       },
     ],
+  },
+  {
+    path: '/dashbord',
+    element: (
+      <PrivateRoutes>
+        <Dashbord></Dashbord>
+      </PrivateRoutes>
+    ),
   },
 ])
